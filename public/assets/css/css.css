@@ -1,0 +1,140 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2.5rem;
+    color: #003366;
+}
+
+/* Habitations container (responsive grid layout) */
+.habitations-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Aligner 5 par 5 */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .habitaciones-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 par 4 si l'écran est plus petit */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .habitaciones-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 par 3 si l'écran est plus petit */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .habitaciones-container {
+        grid-template-columns: 1fr; /* 1 par 1 sur des écrans très petits */
+    }
+}
+
+/* Card styles */
+.habitation-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.habitation-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image styles */
+.habitation-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.habitation-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Information section */
+.habitation-info {
+    padding: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.habitation-info p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.habitation-info strong {
+    color: #003366;
+}
+
+/* Actions (buttons) */
+.habitation-actions {
+    padding: 15px;
+    background-color: #003366;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.habitation-actions a {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.habitation-actions a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Hover effects for actions */
+.habitation-actions a:focus {
+    outline: none;
+}
+
+.habitation-actions a:active {
+    transform: scale(0.98);
+}
+
+/* Link to add habitation */
+.add-habitation-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.add-habitation-link:hover {
+    color: #0056b3;
+}

@@ -1,0 +1,41 @@
+
+        body {
+            background: url('/assets/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .form-section {
+            background-color: rgba(210, 190, 220);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 15px;
+        }
+
+        .btn-custom {
+            font-size: 1em;
+            font-weight: bold;
+            border: 2px solid white;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: white;
+            color: black;
+        }
